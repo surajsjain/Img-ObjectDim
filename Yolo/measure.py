@@ -6,10 +6,9 @@
 
 import numpy as np
 import yolo
-import webCam as wc
+# import webCam as wc
 from keras.models import load_model
 from math import ceil
-
 
 # In[7]:
 
@@ -92,16 +91,26 @@ def main(im1, im2, m, fl, model):
     avgW = (rw1+rw2)/2
     # avgW = avgW + (0.2*avgW)
 
-    print(avgH/100)
-    print(avgW/100)
-    print(dist)
+    # print(avgH/100)
+    # print(avgW/100)
+    # print(dist)
+    print('\n\nDimensions of the object in the picture: '+str(avgH/100)+"cm X "+str(avgW/100)+"cm")
+    print("Distance from the camera to the object: "+str(dist)+"cm")
 
 ## Test Script
+
 model = load_model('yolo.h5')
+dbc = 5
+print('\n\n-----------------------------------------------------------------')
+print('-------------------------Started the program---------------------')
+print('-----------------------------------------------------------------')
+print('\n\n')
+dbc = int(input('Enter the distance (in centimeters) between the cameras (or the distance between the 2 positons of the camera)\n(By deafualt, in the test cases that have been tested by the developers, the cameras were positioned 5 centimeters apart):\n'))
 
 while(True):
+    print('\n\n')
     im1 = input('Enter the name of the 1st Image: \n')
     im2 = input('Enter the name of the 2nd Image: \n')
 
-    main(im1=im1, im2=im2, m=5, fl=25, model=model)
+    main(im1=im1, im2=im2, m=dbc, fl=25, model=model)
     # print('Distance to the object',getDist(im1='../pics/'+im1, im2=im2, m=5, model=model))
