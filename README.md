@@ -4,7 +4,7 @@
 3. This might have potential to substitute some expensive sensors in stuff like self-driving vehicles, also has the potential for use in areal surverys and much more!
 4. You will need a set-up of 2 cameras (recomended to be placed 5cm apart, one in the front and another in the back). But you can also have the same camera take 2 pictures by just moving it 5cm forward from its original position (You have to be very careful and accurate while doing this and avoid human error, if you want to get some accurate results).
 
-> ## NOTE: The full version of the documentation will be coming soon
+> ## NOTE: For the principle behind the working of this, [refer here](https://surajsjain.ml/img_objdim_doc.html)
 
 # Specific Requirements are needed
 This program needs specific requirements to run. So, it is recomended that you use the dockerfile if you want to try it out. </br>
